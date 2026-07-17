@@ -585,5 +585,156 @@ h1, h2, h3, h4 {
 }
 @media (max-width:560px){
   .fs-grid{grid-template-columns:1fr;gap:18px;}
+}/* ============================================================
+   APPEND #3 — paste at the very bottom of style.css,
+   AFTER the FAQ block and the fact strip block.
+   Adds: zone fee cards, fee notes, footer NNA badge row.
+   ============================================================ */
+
+/* --- Zone fee cards --- */
+.zones{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:14px;
+  margin:30px 0 26px;
 }
+.zone{
+  background:#fffdf7;
+  border:1px solid #e3ddca;
+  border-top:3px solid #bfa14a;
+  padding:18px 16px;
+}
+.zone-head{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:8px;
+  margin-bottom:10px;
+  padding-bottom:10px;
+  border-bottom:1px solid #e3ddca;
+}
+.zone-n{
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  font-weight:700;
+  color:#9c8235;
+}
+.zone-fee{
+  font-family:"Cormorant Garamond",Cormorant,"EB Garamond",Georgia,serif;
+  font-size:30px;
+  font-weight:600;
+  line-height:1;
+  color:#1f4d38;
+}
+.zone p{
+  margin:0;
+  font-size:13.5px;
+  line-height:1.55;
+  color:#5a4528;
+}
+
+/* --- Fee notes --- */
+.fee-note{
+  font-size:15px;
+  color:#5a4528;
+  max-width:70ch;
+  margin:0 0 10px;
+}
+.fee-note b{color:#1f4d38;}
+
+/* --- Footer NNA badge --- */
+.foot-legal-row{
+  display:flex;
+  align-items:flex-start;
+  gap:22px;
+}
+.nna{
+  flex:0 0 auto;
+  display:block;
+  line-height:0;
+}
+.nna img{
+  display:block;
+  width:76px;
+  height:76px;
+  background:#fffdf7;
+  padding:6px;
+  border-radius:4px;
+}
+.nna:hover img{opacity:.88;}
+
+@media (max-width:1000px){
+  .zones{grid-template-columns:repeat(3,1fr);}
+}
+@media (max-width:760px){
+  .zones{grid-template-columns:repeat(2,1fr);}
+  .foot-legal-row{flex-direction:column;gap:16px;}
+}
+@media (max-width:460px){
+  .zones{grid-template-columns:1fr;}
+}
+
+/* --- Hours block --- */
+.hours{
+  display:grid;
+  grid-template-columns:1.15fr 1fr;
+  gap:40px;
+  margin-top:40px;
+  padding-top:36px;
+  border-top:1px solid #e3ddca;
+}
+.hours .eyebrow{margin-bottom:12px;}
+.hours-line{
+  font-family:"Cormorant Garamond",Cormorant,"EB Garamond",Georgia,serif;
+  font-size:25px;
+  font-weight:600;
+  color:#1f4d38;
+  margin:0 0 18px;
+  line-height:1.25;
+}
+.hours-list{
+  list-style:none;
+  margin:0 0 16px;
+  padding:0;
+  max-width:44ch;
+}
+.hours-list li{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:14px;
+  padding:9px 0;
+  border-bottom:1px dotted #e3ddca;
+}
+.hours-list li:last-child{border-bottom:none;}
+.hours-list span{font-size:15.5px;color:#4a3520;}
+.hours-list b{
+  font-size:15.5px;
+  color:#9c8235;
+  white-space:nowrap;
+}
+.hours-note{
+  font-size:15px;
+  color:#5a4528;
+  margin:0;
+  max-width:52ch;
+}
+.hours-aside{
+  background:#fffdf7;
+  border-left:3px solid #bfa14a;
+  padding:22px 24px;
+  align-self:start;
+}
+.hours-aside p{
+  margin:0;
+  font-size:15.5px;
+  line-height:1.65;
+  color:#4a3520;
+}
+
+@media (max-width:860px){
+  .hours{grid-template-columns:1fr;gap:28px;}
+}
+
 
