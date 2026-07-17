@@ -496,4 +496,94 @@ h1, h2, h3, h4 {
 @media (max-width:760px){
   .qa summary{font-size:19px;padding-right:36px;}
   .hero-cta .btn{flex:1 1 100%;text-align:center;}
+}/* ============================================================
+   APPEND #2 — paste at the very bottom of style.css,
+   AFTER the FAQ accordion block you already added.
+   Adds: fact strip, town tags, split columns, tight steps.
+   ============================================================ */
+
+/* --- Fact strip (under the hero) --- */
+.factstrip{
+  background:#f4f1e8;
+  border-top:1px solid #e3ddca;
+  border-bottom:1px solid #e3ddca;
+  padding:30px 0;
 }
+.fs-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:28px;
+}
+.fs{
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+  padding-left:16px;
+  border-left:2px solid #bfa14a;
+}
+.fs b{
+  font-family:"Cormorant Garamond",Cormorant,"EB Garamond",Georgia,serif;
+  font-size:27px;
+  font-weight:600;
+  line-height:1.1;
+  color:#1f4d38;
+}
+.fs span{
+  font-size:13.5px;
+  line-height:1.45;
+  color:#5a4528;
+}
+
+/* --- Town tags --- */
+.towns{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:22px 0 24px;
+}
+.towns span{
+  display:inline-block;
+  padding:6px 14px;
+  background:#fffdf7;
+  border:1px solid #e3ddca;
+  font-size:14px;
+  color:#4a3520;
+  letter-spacing:.01em;
+}
+.area-note{font-size:15.5px;color:#5a4528;}
+
+/* --- Two-column split --- */
+.split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:56px;
+}
+.split h2{margin-bottom:16px;}
+
+/* --- Tight numbered steps --- */
+.tight-steps{
+  margin:0 0 16px;
+  padding-left:20px;
+}
+.tight-steps li{
+  margin-bottom:12px;
+  line-height:1.6;
+  max-width:46ch;
+}
+.tight-steps li::marker{
+  color:#bfa14a;
+  font-weight:700;
+}
+.tight-steps b{color:#1f4d38;}
+
+/* --- Creds band under a callout --- */
+.creds-lead{margin-top:32px;justify-content:center;}
+
+@media (max-width:900px){
+  .fs-grid{grid-template-columns:repeat(2,1fr);gap:22px;}
+  .split{grid-template-columns:1fr;gap:36px;}
+}
+@media (max-width:560px){
+  .fs-grid{grid-template-columns:1fr;gap:18px;}
+}
+
