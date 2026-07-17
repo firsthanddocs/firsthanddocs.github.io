@@ -408,4 +408,92 @@ h1, h2, h3, h4 {
 @media (prefers-reduced-motion: reduce) {
   .js-anim .reveal.in { animation: none; }
   html { scroll-behavior: auto; }
+} /* ============================================================
+   APPEND THIS TO THE BOTTOM OF YOUR EXISTING style.css
+   Do not replace the file. Paste this at the end.
+   Adds: FAQ accordion, hero button row, lead paragraphs,
+         plain lists, outline button, creds-lead variant.
+   ============================================================ */
+
+/* --- Hero button row --- */
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px;}
+
+/* --- Outline button (pairs with .btn-gold) --- */
+.btn-outline{
+  background:transparent;
+  color:#1f4d38;
+  border:1.5px solid #bfa14a;
+}
+.btn-outline:hover{background:#bfa14a;color:#fffdf7;}
+
+/* --- Lead paragraph --- */
+.lead{max-width:70ch;margin:0 0 16px;}
+
+/* --- Plain list --- */
+.plain-list{padding-left:20px;margin:0 0 28px;max-width:70ch;}
+.plain-list li{margin-bottom:8px;}
+
+/* --- Creds as a standalone lead band --- */
+.creds-lead{margin:0;justify-content:flex-start;}
+
+/* ============================================================
+   FAQ ACCORDION
+   ============================================================ */
+.faq-wrap{max-width:860px;}
+
+.faq-cat{
+  font-family:"Source Sans 3","Source Sans Pro",sans-serif;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  font-weight:700;
+  color:#9c8235;
+  padding-bottom:12px;
+  margin:52px 0 4px;
+  border-bottom:1px solid #e3ddca;
+}
+.faq-cat:first-child{margin-top:0;}
+
+.qa{border-bottom:1px solid #e3ddca;}
+
+.qa summary{
+  cursor:pointer;
+  list-style:none;
+  padding:20px 44px 20px 0;
+  position:relative;
+  font-family:"Cormorant Garamond",Cormorant,"EB Garamond",Georgia,serif;
+  font-size:23px;
+  font-weight:600;
+  line-height:1.3;
+  color:#1f4d38;
+}
+.qa summary::-webkit-details-marker{display:none;}
+.qa summary::marker{content:"";}
+
+.qa summary::after{
+  content:"+";
+  position:absolute;
+  right:6px;
+  top:50%;
+  transform:translateY(-50%);
+  color:#bfa14a;
+  font-family:"Source Sans 3","Source Sans Pro",sans-serif;
+  font-size:26px;
+  font-weight:400;
+  line-height:1;
+}
+.qa[open] summary::after{content:"\2013";}
+.qa summary:hover{color:#9c8235;}
+.qa summary:focus-visible{outline:2px solid #bfa14a;outline-offset:3px;}
+
+.qa-body{padding:0 0 26px;}
+.qa-body p{margin:0 0 14px;max-width:70ch;}
+.qa-body p:last-child{margin-bottom:0;}
+.qa-body ul{margin:0 0 14px;padding-left:20px;max-width:70ch;}
+.qa-body li{margin-bottom:8px;}
+.qa-body b{color:#1f4d38;}
+
+@media (max-width:760px){
+  .qa summary{font-size:19px;padding-right:36px;}
+  .hero-cta .btn{flex:1 1 100%;text-align:center;}
 }
