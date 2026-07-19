@@ -752,6 +752,60 @@ h1, h2, h3, h4 {
    wins because it's later in the file. If the logo looks too big
    or too small, change BOTH numbers above to the same value
    (e.g. 44px and 44px). */
+/* ============================================================
+   APPEND #5 — paste at the very bottom of style.css.
+   Fixes the mobile menu: reduces the big top gap so all links
+   fit without scrolling, and keeps the panel fully solid.
+   (Replaces any earlier APPEND #5 — use only this version.)
+   ============================================================ */
+
+/* Solid, opaque panel — no blur bleed-through */
+.nav{
+  background:#f4f1e8 !important;
+  backdrop-filter:none !important;
+  -webkit-backdrop-filter:none !important;
+}
+
+/* Reduce the oversized top padding so "Home" sits near the top
+   and all five links are visible without scrolling. The old rule
+   used 86px; this pulls the list up under the header cleanly. */
+.nav{
+  padding-top:80px !important;   /* room for the close area / header */
+  gap:2px;
+  justify-content:flex-start;
+}
+
+/* Tighten each link a touch so five fit on short phones */
+.nav a{
+  padding-top:11px !important;
+  padding-bottom:11px !important;
+}
+
+/* While closed, panel is fully hidden and non-interactive */
+.nav:not(.open){
+  visibility:hidden;
+  pointer-events:none;
+}
+
+/* Layering: header above panel above scrim */
+.site-head{ z-index:120; }
+.nav{ z-index:110; }
+.nav-scrim{ z-index:105; }
+
+/* Desktop: restore the horizontal row, undo mobile hiding */
+@media (min-width:760px){
+  .nav,
+  .nav:not(.open){
+    visibility:visible !important;
+    pointer-events:auto !important;
+    background:none !important;
+    padding-top:0 !important;
+  }
+  .nav a{
+    padding-top:8px !important;
+    padding-bottom:8px !important;
+  }
+}
 
 
 
