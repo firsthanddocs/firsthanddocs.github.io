@@ -735,6 +735,23 @@ h1, h2, h3, h4 {
 
 @media (max-width:860px){
   .hours{grid-template-columns:1fr;gap:28px;}
+}/* ============================================================
+   APPEND #4 — paste at the very bottom of style.css.
+   Sizes the new PNG logo mark in the header (replaces the
+   old inline SVG mark). Bumped to 48px for legibility.
+   ============================================================ */
+
+.site-head .mark{
+  width:48px;
+  height:48px;
+  display:block;
+  flex:0 0 auto;
 }
+
+/* If your existing .mark rule sets a smaller width/height, this
+   wins because it's later in the file. If the logo looks too big
+   or too small, change BOTH numbers above to the same value
+   (e.g. 44px and 44px). */
+
 
 
