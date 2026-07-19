@@ -805,7 +805,49 @@ h1, h2, h3, h4 {
     padding-top:8px !important;
     padding-bottom:8px !important;
   }
+}/* ============================================================
+   APPEND #6 — paste at the very bottom of style.css.
+   Forces the mobile menu panel to FULL screen height so all
+   links show. Use this whether or not APPEND-5 was added.
+   ============================================================ */
+
+@media (max-width:759px){
+  .nav{
+    position:fixed !important;
+    top:0 !important;
+    right:0 !important;
+    bottom:0 !important;
+    left:auto !important;
+    height:100vh !important;
+    height:100dvh !important;      /* dynamic viewport height on mobile */
+    width:min(82%,340px) !important;
+    background:#f4f1e8 !important;
+    backdrop-filter:none !important;
+    -webkit-backdrop-filter:none !important;
+    padding:80px 26px 30px !important;
+    display:flex !important;
+    flex-direction:column !important;
+    gap:2px !important;
+    overflow-y:auto !important;
+    -webkit-overflow-scrolling:touch;
+    z-index:110 !important;
+  }
+  .nav:not(.open){
+    visibility:hidden !important;
+    pointer-events:none !important;
+  }
+  .nav.open{
+    visibility:visible !important;
+    pointer-events:auto !important;
+  }
+  .nav a{
+    padding:11px 4px !important;
+    border-bottom:1px solid #e3ddca !important;
+  }
+  .site-head{ z-index:120 !important; }
+  .nav-scrim{ z-index:105 !important; }
 }
+
 
 
 
