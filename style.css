@@ -901,7 +901,19 @@ h1, h2, h3, h4 {
   color:#9c8235;
   font-style:italic;
   font-weight:600;
+}/* ============================================================
+   APPEND #9 — paste at the very bottom of style.css.
+   Styles the owner name line in the homepage hero.
+   ============================================================ */
+
+.hero-name{
+  font-family:"Cormorant Garamond",Cormorant,"EB Garamond",Georgia,serif;
+  font-size:1.15rem;
+  font-style:italic;
+  color:#1f4d38;
+  margin-top:6px;
 }
+
 
 
 
