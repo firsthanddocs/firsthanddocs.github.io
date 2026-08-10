@@ -912,7 +912,49 @@ h1, h2, h3, h4 {
   font-style:italic;
   color:#1f4d38;
   margin-top:6px;
+}/* ============================================================
+   APPEND #10 — paste at the very bottom of style.css.
+   Styles the estate/bedside pricing block on the homepage.
+   ============================================================ */
+
+.bedside-fee{
+  background:#f4f1e8;
+  border:1px solid #e3ddca;
+  border-left:3px solid #bfa14a;
+  padding:26px 28px;
+  margin:30px 0 8px;
 }
+.bedside-fee .eyebrow{margin-bottom:8px;}
+.bedside-fee h3{
+  font-family:"Cormorant Garamond",Cormorant,"EB Garamond",Georgia,serif;
+  font-size:24px;
+  font-weight:600;
+  color:#1f4d38;
+  margin:0 0 10px;
+}
+.bedside-lines{
+  list-style:none;
+  margin:16px 0;
+  padding:0;
+  max-width:44ch;
+}
+.bedside-lines li{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:14px;
+  padding:9px 0;
+  border-bottom:1px dotted #e3ddca;
+}
+.bedside-lines li:last-child{border-bottom:none;}
+.bedside-lines span{font-size:15.5px;color:#4a3520;}
+.bedside-lines b{
+  font-family:"Cormorant Garamond",Cormorant,"EB Garamond",Georgia,serif;
+  font-size:19px;
+  color:#1f4d38;
+  white-space:nowrap;
+}
+
 
 
 
